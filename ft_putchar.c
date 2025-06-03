@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 14:34:42 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/03 14:36:06 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/06/03 16:16:37 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 int	ft_putchar(char c);
 {
-	return (write(1, &c, 1);
+	return (write(1, &c, 1));
 }
