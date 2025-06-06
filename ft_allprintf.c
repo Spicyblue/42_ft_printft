@@ -6,11 +6,32 @@
 /*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 11:48:08 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/06 12:30:02 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/06/06 17:45:32 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
+
+static	int	case_handler(char id, va_list args)
+{
+	if (id == 'c')
+		return (ft_putchar(va_arg(args, int)));
+	else if (id == 's')
+		return (ft_putstr(va_arg(args, char *)));
+	else if (id == 'p')
+		return (ft_putptr(va_arg(args, void *)));
+	else if (id == 'd' || id == 'i')
+		return (ft_putnbr(va_arg(args, int)));
+	else if (id == 'u')
+		return (ft_putnbr_usg(va_arg(args, unsigned int)));
+	else if (id == 'x')
+		return (ft_puthex(va_arg(args, unsigned int), 0));
+	else if (id == 'X')
+		return (ft_putnbr(va_arg(args, unsigned int), 1));
+	else if (id == '%')
+		return (ft_putchar('%'));
+	return (0);
+}
 
 int	ft_allprintf(const char *format, va_list args)
 {
@@ -24,12 +45,7 @@ int	ft_allprintf(const char *format, va_list args)
 		if (format[ct] == '%' & format[ct + 1])
 		{
 			ct++;
-			if (format[ct] == 'd')
-				len += ft_putchar(va_arg(args, int));
-			else if (format[ct] == 's')
-				len += ft_putchar(va_arg(args, char *));
-			else if (format[ct] == 'd' || format[ct] == 'i')
-				len += ft_putnbr(va_arg(args, int));
+			len += case_handler(format[ct], args);
 		}
 		else
 			len += ft_putchar(format[ct]);
