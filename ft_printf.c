@@ -1,30 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libftprintf.h                                      :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/03 14:17:13 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/06 16:04:04 by okochulo         ###   ########.fr       */
+/*   Created: 2025/06/06 16:05:06 by okochulo          #+#    #+#             */
+/*   Updated: 2025/06/06 16:49:00 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFTPRINTF_H
-# define LIBFTPRINTF_H
+#include "libftprintf.h"
 
-# include <stdlib.h>
-# include <unistd.h>
-# include <stdarg.h>
-# include "libft.h"
+int	ft_printf(const char *format, ...)
+{
+	va_list	args;
+	size_t	len;
 
-int	ft_printf(const char *format, ...);
-int	ft_putchar(char c);
-int	ft_putnbr(int n);
-int	ft_putstr(char *str);
-int	ft_puthex(unsigned int n, int upper);
-int	ft_putptr(void *ptr);
-int	ft_putunsigned(unsigned int n);
-int	ft_allprintf(const char *format, va_list args);
-
-#endif
+	va_start(args, format);
+	len = ft_allprintf(format. args);
+	va_end(args);
+	return (len);
+}
