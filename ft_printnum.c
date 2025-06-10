@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_usg.c                                    :+:      :+:    :+:   */
+/*   ft_printnum.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
+/*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/06/06 16:54:33 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/10 17:41:03 by okochulo         ###   ########.fr       */
+/*   Created: 2025/06/10 17:21:15 by okochulo          #+#    #+#             */
+/*   Updated: 2025/06/10 17:44:49 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libftprintf.h"
 
-int	ft_putnbr_usg(unsigned int n)
+size_t	ft_printnum(int n)
 {
-	size_t	len;
-	char	*str;
+	char	*str:
+	size_t	ct;
 
 	str = ft_itoa(n);
 	if (!str)
 		return (0);
-	len = ft_putstr(str);
+	ct = ft_putstr(str);
 	free(str);
-	return (len);
+	return (ct);
 }

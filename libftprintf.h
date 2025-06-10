@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libftprintf.h                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
+/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 14:17:13 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/06 16:58:45 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/06/10 18:04:04 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,12 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <stdarg.h>
-# include "libft.h"
+# include "Libft/libft.h"
 
 int	ft_printf(const char *format, ...);
 int	ft_putchar(char c);
 int	ft_putnbr(int n);
+size_t  ft_printnum(int n)
 int	ft_putstr(char *str);
 int	ft_puthex(unsigned int n, int upper);
 int	ft_putptr(void *ptr);
