@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printnum.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
+/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/10 17:21:15 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/10 17:44:49 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/06/25 11:13:42 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 size_t	ft_printnum(int n)
 {
-	char	*str:
-	size_t	ct;
+	char	*str;
+	size_t	len;
 
 	str = ft_itoa(n);
 	if (!str)
 		return (0);
-	ct = ft_putstr(str);
+	len = ft_putstr(str);
 	free(str);
-	return (ct);
+	return (len);
 }
