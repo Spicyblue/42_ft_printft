@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 11:48:08 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/25 12:19:04 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/06/30 16:22:52 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static	int	case_handler(char id, va_list args)
 	else if (id == 'p')
 		return (ft_putptr(va_arg(args, void *)));
 	else if (id == 'd')
-		return (ft_putnbr(va_arg(args, int)));
+		return (ft_printnum(va_arg(args, int)));
 	else if (id == 'i')
 		return (ft_printnum(va_arg(args, int)));
 	else if (id == 'u')
