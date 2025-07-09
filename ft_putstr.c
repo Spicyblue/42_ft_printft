@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 11:34:33 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/16 16:57:36 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/07/09 15:27:21 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,10 @@ int	ft_putstr(char *str)
 	size_t	ct;
 
 	if (!str)
-		str = NULL;
+	{
+		ct = write(1, "(null)", 6);
+		return (ct);
+	}
 	ct = 0;
 	while (str[ct])
 	{
