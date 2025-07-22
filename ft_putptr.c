@@ -6,7 +6,7 @@
 /*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 16:12:23 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/25 14:54:17 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/07/22 17:39:14 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,12 @@ int	ft_putptr(void *ptr)
 	char				*hex;
 	size_t				len;
 
+	len = 0;
+	if (!ptr)
+	{
+		len = write(1, "(nil)", 5);
+		return (len);
+	}
 	add = (unsigned long long)ptr;
 	hex = "0123456789abcdef";
 	len = ft_putstr("0x");
