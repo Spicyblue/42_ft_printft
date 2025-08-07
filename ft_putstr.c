@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
+/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 11:34:33 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/06 11:41:06 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/07/21 19:48:06 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,12 @@ int	ft_putstr(char *str)
 	size_t	len;
 	size_t	ct;
 
+	len = 0;
 	if (!str)
-		str = NULL;
+	{
+		ct = write(1, "(null)", 6);
+		return (ct);
+	}
 	ct = 0;
 	while (str[ct])
 	{

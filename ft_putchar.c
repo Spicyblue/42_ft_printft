@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
+/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/03 14:34:42 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/03 16:16:37 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/06/16 16:59:50 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

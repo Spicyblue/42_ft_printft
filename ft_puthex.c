@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_puthex.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: okochulo <okochulo@student.42vienna.c      +#+  +:+       +#+        */
+/*   By: okochulo <okochulo@student.42vienna.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/06/06 17:01:10 by okochulo          #+#    #+#             */
-/*   Updated: 2025/06/06 17:47:02 by okochulo         ###   ########.fr       */
+/*   Updated: 2025/06/25 12:19:28 by okochulo         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	ft_puthex(unsigned int n, int uppercase)
 	char	*hex;
 	size_t	len;
 
+	len = 0;
 	if (uppercase)
 		hex = "0123456789ABCDEF";
 	else
