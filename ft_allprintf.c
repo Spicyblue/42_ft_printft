@@ -27,7 +27,7 @@ static	int	case_handler(char id, va_list args)
 	else if (id == 'x')
 		return (ft_puthex(va_arg(args, unsigned int), 0));
 	else if (id == 'X')
-		return (ft_putnbr(va_arg(args, unsigned int), 1));
+		return (ft_putnbr(va_arg(args, unsigned int)));
 	else if (id == '%')
 		return (ft_putchar('%'));
 	return (0);
@@ -42,7 +42,7 @@ int	ft_allprintf(const char *format, va_list args)
 	len = 0;
 	while (format[ct])
 	{
-		if (format[ct] == '%' & format[ct + 1])
+		if (format[ct] == '%' && format[ct + 1])
 		{
 			ct++;
 			len += case_handler(format[ct], args);

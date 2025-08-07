@@ -35,7 +35,7 @@ int	ft_putptr(void *ptr)
 	{
 		shift_add = add >> (add_idx * 4);
 		c = hex[shift_add & 0xF];
-		if (c != '0' || !leading)
+		if (c != '0' || !shift_add)
 		{
 			len += ft_putchar(c);
 			flag = 0;

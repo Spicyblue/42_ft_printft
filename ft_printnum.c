@@ -14,7 +14,7 @@
 
 size_t	ft_printnum(int n)
 {
-	char	*str:
+	char	*str;
 	size_t	ct;
 
 	str = ft_itoa(n);

@@ -12,7 +12,7 @@
 
 #include "libftprintf.h"
 
-int	ft_putnbr(int n);
+int	ft_putnbr(int n)
 {
 	if (n == -2147483648)
 	{
@@ -31,6 +31,6 @@ int	ft_putnbr(int n);
 	}
 	else
 	{
-		ft_putchar(n + '0', fd);
+		ft_putchar(n + '0');
 	}
 }
