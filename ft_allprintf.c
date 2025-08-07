@@ -29,11 +29,7 @@ static	int	case_handler(char id, va_list args)
 	else if (id == 'x')
 		return (ft_puthex(va_arg(args, unsigned int), 0));
 	else if (id == 'X')
-<<<<<<< HEAD
-		return (ft_putnbr(va_arg(args, unsigned int)));
-=======
 		return (ft_puthex(va_arg(args, unsigned int), 1));
->>>>>>> 9148c42cd520277de1419c61973574c2c6d6ced0
 	else if (id == '%')
 		return (ft_putchar('%'));
 	return (0);
